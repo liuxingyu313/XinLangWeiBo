@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F1509" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="iEf-s1-9kE">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--Root Navigation Controller-->
+        <scene sceneID="TTy-d2-v7W">
+            <objects>
+                <navigationController id="iEf-s1-9kE" customClass="RootNavigationController" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="EPB-oZ-3A8">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="FuS-Hd-vBv" kind="relationship" relationship="rootViewController" id="siR-vm-GUa"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yel-gl-5EJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="204" y="356"/>
+        </scene>
+        <!--微博-->
+        <scene sceneID="tbJ-AM-Egh">
+            <objects>
+                <viewController id="FuS-Hd-vBv" customClass="RightViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="UWL-PC-gtf"/>
+                        <viewControllerLayoutGuide type="bottom" id="wE3-ud-zav"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="rM0-4l-oYf">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" tag="200" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gdN-wO-rvQ" customClass="ThemeButton">
+                                <rect key="frame" x="535" y="80" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="fCg-yw-eIn"/>
+                                    <constraint firstAttribute="height" constant="50" id="rER-o9-22Q"/>
+                                </constraints>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="sendAction:" destination="FuS-Hd-vBv" eventType="touchUpInside" id="EDy-XT-pjR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="201" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9bZ-Ex-Rth" customClass="ThemeButton">
+                                <rect key="frame" x="535" y="130" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="HRf-RZ-aRZ"/>
+                                    <constraint firstAttribute="width" constant="50" id="IlF-MZ-TpF"/>
+                                </constraints>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="sendAction:" destination="FuS-Hd-vBv" eventType="touchUpInside" id="B49-Tg-5po"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="202" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uQg-MS-LgZ" customClass="ThemeButton">
+                                <rect key="frame" x="535" y="180" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="Ub7-Xx-9on"/>
+                                    <constraint firstAttribute="height" constant="50" id="X4j-OD-7mH"/>
+                                </constraints>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="sendAction:" destination="FuS-Hd-vBv" eventType="touchUpInside" id="TcZ-R4-iBZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="203" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aG7-ys-XV4" customClass="ThemeButton">
+                                <rect key="frame" x="535" y="230" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="aHl-ae-fEw"/>
+                                    <constraint firstAttribute="width" constant="50" id="jCX-lq-HCX"/>
+                                </constraints>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="sendAction:" destination="FuS-Hd-vBv" eventType="touchUpInside" id="GHP-cH-ZiM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="204" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xSV-S1-oyq" customClass="ThemeButton">
+                                <rect key="frame" x="535" y="280" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="NUZ-Qp-fJv"/>
+                                    <constraint firstAttribute="width" constant="50" id="n01-2a-byy"/>
+                                </constraints>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="sendAction:" destination="FuS-Hd-vBv" eventType="touchUpInside" id="hfs-cF-01d"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="205" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JUE-2H-BJd" customClass="ThemeButton">
+                                <rect key="frame" x="535" y="330" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Pnr-bb-Uwe"/>
+                                    <constraint firstAttribute="width" constant="50" id="m8g-O1-OaW"/>
+                                </constraints>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="sendAction:" destination="FuS-Hd-vBv" eventType="touchUpInside" id="rNp-hu-f2Y"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="207" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NOz-5b-7Lq">
+                                <rect key="frame" x="535" y="550" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="Uv1-Hr-rbY"/>
+                                    <constraint firstAttribute="height" constant="50" id="Yfr-Qb-Nl5"/>
+                                </constraints>
+                                <state key="normal" image="Resource.bundle/qr_btn@2x.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="sendAction:" destination="FuS-Hd-vBv" eventType="touchUpInside" id="YFx-Kr-JEK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="206" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c2c-3M-mqH">
+                                <rect key="frame" x="535" y="492" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="K7a-1A-Jev"/>
+                                    <constraint firstAttribute="width" constant="50" id="dcy-zr-jbo"/>
+                                </constraints>
+                                <state key="normal" image="Resource.bundle/btn_map_location@2x.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="sendAction:" destination="FuS-Hd-vBv" eventType="touchUpInside" id="IQN-0N-6ub"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="gdN-wO-rvQ" secondAttribute="trailing" constant="15" id="921-ki-xPE"/>
+                            <constraint firstAttribute="trailing" secondItem="c2c-3M-mqH" secondAttribute="trailing" constant="15" id="9xN-h1-38l"/>
+                            <constraint firstAttribute="trailing" secondItem="aG7-ys-XV4" secondAttribute="trailing" constant="15" id="Cc5-I2-dfJ"/>
+                            <constraint firstItem="uQg-MS-LgZ" firstAttribute="top" secondItem="9bZ-Ex-Rth" secondAttribute="bottom" id="H7V-yZ-hWg"/>
+                            <constraint firstAttribute="trailing" secondItem="uQg-MS-LgZ" secondAttribute="trailing" constant="15" id="Jsb-84-ver"/>
+                            <constraint firstItem="NOz-5b-7Lq" firstAttribute="top" secondItem="c2c-3M-mqH" secondAttribute="bottom" constant="8" id="K5u-Ew-jZk"/>
+                            <constraint firstItem="gdN-wO-rvQ" firstAttribute="top" secondItem="UWL-PC-gtf" secondAttribute="bottom" constant="16" id="NqJ-fl-ERB"/>
+                            <constraint firstAttribute="trailing" secondItem="9bZ-Ex-Rth" secondAttribute="trailing" constant="15" id="QGf-S2-LHV"/>
+                            <constraint firstAttribute="trailing" secondItem="xSV-S1-oyq" secondAttribute="trailing" constant="15" id="QTx-5Z-soB"/>
+                            <constraint firstItem="aG7-ys-XV4" firstAttribute="top" secondItem="uQg-MS-LgZ" secondAttribute="bottom" id="Rg6-la-Ctw"/>
+                            <constraint firstItem="9bZ-Ex-Rth" firstAttribute="top" secondItem="gdN-wO-rvQ" secondAttribute="bottom" id="ckd-tb-0Wx"/>
+                            <constraint firstItem="wE3-ud-zav" firstAttribute="top" secondItem="NOz-5b-7Lq" secondAttribute="bottom" id="frZ-JW-RWh"/>
+                            <constraint firstItem="xSV-S1-oyq" firstAttribute="top" secondItem="aG7-ys-XV4" secondAttribute="bottom" id="lJW-UD-Zac"/>
+                            <constraint firstAttribute="trailing" secondItem="JUE-2H-BJd" secondAttribute="trailing" constant="15" id="nCQ-0V-LJw"/>
+                            <constraint firstAttribute="trailing" secondItem="NOz-5b-7Lq" secondAttribute="trailing" constant="15" id="rgA-us-7wC"/>
+                            <constraint firstItem="JUE-2H-BJd" firstAttribute="top" secondItem="xSV-S1-oyq" secondAttribute="bottom" id="yeH-Hs-0AW"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="微博" id="vNQ-kf-QL9"/>
+                    <connections>
+                        <outlet property="cameraBtn" destination="9bZ-Ex-Rth" id="0Es-yT-G1b"/>
+                        <outlet property="locationBtn" destination="JUE-2H-BJd" id="JkJ-fL-zgw"/>
+                        <outlet property="multPic" destination="xSV-S1-oyq" id="8qF-aR-UOr"/>
+                        <outlet property="photoBtn" destination="uQg-MS-LgZ" id="BEI-IH-aVa"/>
+                        <outlet property="videoBtn" destination="aG7-ys-XV4" id="SUb-Io-IFt"/>
+                        <outlet property="writeBtn" destination="gdN-wO-rvQ" id="Z3s-IV-RHE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0vB-yh-hfz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="908" y="351"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Resource.bundle/btn_map_location@2x.png" width="40" height="40"/>
+        <image name="Resource.bundle/qr_btn@2x.png" width="40" height="40"/>
+    </resources>
+</document>

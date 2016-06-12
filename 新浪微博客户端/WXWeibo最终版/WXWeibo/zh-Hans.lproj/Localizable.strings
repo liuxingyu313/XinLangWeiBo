@@ -1,0 +1,11 @@
+/* 
+  Localizable.strings
+  WXWeibo
+
+  Created by Zheng on 15/11/4.
+  Copyright © 2015年 JayWon. All rights reserved.
+*/
+
+"Pull to refresh..."="下拉刷新";
+"Release to refresh..."="松手刷新数据";
+"Loading..."="正在加载";

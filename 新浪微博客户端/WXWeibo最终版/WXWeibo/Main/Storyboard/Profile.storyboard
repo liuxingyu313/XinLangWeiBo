@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1509" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="G76-lS-WKq">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--Root Navigation Controller-->
+        <scene sceneID="Rx6-fS-KzU">
+            <objects>
+                <navigationController id="G76-lS-WKq" customClass="RootNavigationController" sceneMemberID="viewController">
+                    <extendedEdge key="edgesForExtendedLayout" top="YES"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="dsu-ZA-w6Z">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="d6p-we-jWK" kind="relationship" relationship="rootViewController" id="DVs-JC-q28"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0fW-cl-NJJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-367" y="636"/>
+        </scene>
+        <!--个人中心-->
+        <scene sceneID="6Zq-gl-B0u">
+            <objects>
+                <viewController id="d6p-we-jWK" customClass="ProfileViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="iV8-Fe-C3M"/>
+                        <viewControllerLayoutGuide type="bottom" id="zOn-Lb-v8F"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="rYH-Ug-112">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="600" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="tNt-dn-oac" customClass="WeiboTableView">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="tNt-dn-oac" firstAttribute="leading" secondItem="rYH-Ug-112" secondAttribute="leading" id="CQd-5g-rKP"/>
+                            <constraint firstAttribute="trailing" secondItem="tNt-dn-oac" secondAttribute="trailing" id="YSq-Tq-RB9"/>
+                            <constraint firstItem="zOn-Lb-v8F" firstAttribute="top" secondItem="tNt-dn-oac" secondAttribute="bottom" id="ebm-Xv-Fj6"/>
+                            <constraint firstItem="tNt-dn-oac" firstAttribute="top" secondItem="rYH-Ug-112" secondAttribute="top" id="tEd-f5-oRg"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="个人中心" id="Mey-DX-61R"/>
+                    <connections>
+                        <outlet property="userTableView" destination="tNt-dn-oac" id="EMv-Zd-jJE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZqN-FU-Y4a" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="421" y="636"/>
+        </scene>
+    </scenes>
+</document>

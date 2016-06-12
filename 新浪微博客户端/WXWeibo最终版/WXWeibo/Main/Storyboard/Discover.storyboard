@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1509" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="VwJ-A9-E74">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--Root Navigation Controller-->
+        <scene sceneID="cG6-7P-82D">
+            <objects>
+                <navigationController id="VwJ-A9-E74" customClass="RootNavigationController" sceneMemberID="viewController">
+                    <extendedEdge key="edgesForExtendedLayout" top="YES"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="JcI-cD-Nm4">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Lyf-eQ-ycm" kind="relationship" relationship="rootViewController" id="OVP-im-ums"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fau-k6-5ww" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-298" y="358"/>
+        </scene>
+        <!--广场-->
+        <scene sceneID="NQS-nk-2rE">
+            <objects>
+                <viewController id="Lyf-eQ-ycm" customClass="DiscoverViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="g74-e5-Qr6"/>
+                        <viewControllerLayoutGuide type="bottom" id="JES-cC-Llj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="n5S-eW-MhS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zvg-fY-21c">
+                                <rect key="frame" x="16" y="80" width="100" height="100"/>
+                                <state key="normal" image="Resource.bundle/附近微博.jpg">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Z9P-WY-GZP" kind="show" id="Npd-JB-v96"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H2v-G3-rTH">
+                                <rect key="frame" x="132" y="80" width="100" height="100"/>
+                                <state key="normal" image="Resource.bundle/附近的人.jpg">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="附近微博" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DcS-kH-urm" customClass="ThemeLabel">
+                                <rect key="frame" x="16" y="188" width="100" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="附近的人" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xzx-V4-ZOK" customClass="ThemeLabel">
+                                <rect key="frame" x="132" y="188" width="100" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="广场" id="WqT-qn-715"/>
+                    <connections>
+                        <outlet property="nearUserBtn" destination="H2v-G3-rTH" id="bqU-9c-7iF"/>
+                        <outlet property="nearUserLabel" destination="xzx-V4-ZOK" id="mGh-4R-0QY"/>
+                        <outlet property="nearWeiboBtn" destination="zvg-fY-21c" id="sXd-8h-NBt"/>
+                        <outlet property="nearWeiboLabel" destination="DcS-kH-urm" id="7Wg-nq-N1e"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wo2-tT-IPu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="535" y="359"/>
+        </scene>
+        <!--附近微博-->
+        <scene sceneID="HI3-sr-Vi4">
+            <objects>
+                <viewController title="附近微博" id="Z9P-WY-GZP" customClass="NearWeiboMapViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="KSI-mJ-SdX"/>
+                        <viewControllerLayoutGuide type="bottom" id="ujn-Jb-ffI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2dI-fu-2ih">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fw7-uN-q20">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Z9P-WY-GZP" id="THG-Oc-N2Z"/>
+                                </connections>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fw7-uN-q20" firstAttribute="top" secondItem="2dI-fu-2ih" secondAttribute="top" id="2zC-B2-z2L"/>
+                            <constraint firstItem="fw7-uN-q20" firstAttribute="leading" secondItem="2dI-fu-2ih" secondAttribute="leading" id="OWn-UQ-4AN"/>
+                            <constraint firstItem="ujn-Jb-ffI" firstAttribute="top" secondItem="fw7-uN-q20" secondAttribute="bottom" id="ldI-e7-aNy"/>
+                            <constraint firstAttribute="trailing" secondItem="fw7-uN-q20" secondAttribute="trailing" id="mhA-4r-GKP"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="fw7-uN-q20" id="hKq-OO-L7m"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U2c-np-ikO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1263" y="358"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Resource.bundle/附近微博.jpg" width="40" height="40"/>
+        <image name="Resource.bundle/附近的人.jpg" width="40" height="40"/>
+    </resources>
+</document>

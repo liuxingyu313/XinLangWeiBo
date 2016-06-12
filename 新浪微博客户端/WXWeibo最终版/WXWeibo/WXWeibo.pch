@@ -1,0 +1,17 @@
+//
+//  WXWeibo.pch
+//  WXWeibo
+//
+//  Created by JayWon on 15/10/20.
+//  Copyright (c) 2015年 JayWon. All rights reserved.
+//
+
+#ifndef WXWeibo_WXWeibo_pch
+#define WXWeibo_WXWeibo_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+#import <UIKit/UIKit.h>
+#import "Common.h"
+
+#endif

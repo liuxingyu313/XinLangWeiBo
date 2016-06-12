@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="bvH-bF-wlQ">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--Root Navigation Controller-->
+        <scene sceneID="Dik-J5-9Af">
+            <objects>
+                <navigationController id="bvH-bF-wlQ" customClass="RootNavigationController" sceneMemberID="viewController">
+                    <extendedEdge key="edgesForExtendedLayout" top="YES"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="c9I-Ni-3JJ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="ReV-tY-r83" kind="relationship" relationship="rootViewController" id="6GS-83-bTt"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oLW-t0-hMB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-256" y="385"/>
+        </scene>
+        <!--首页-->
+        <scene sceneID="XlX-NJ-Drz">
+            <objects>
+                <viewController id="ReV-tY-r83" customClass="HomeViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="m89-dh-6NH"/>
+                        <viewControllerLayoutGuide type="bottom" id="WII-Ds-G5E"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="rOx-aE-6m3">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="600" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="hFU-rb-VUE" customClass="WeiboTableView">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="hFU-rb-VUE" firstAttribute="leading" secondItem="rOx-aE-6m3" secondAttribute="leading" id="3Ww-om-dpI"/>
+                            <constraint firstItem="WII-Ds-G5E" firstAttribute="top" secondItem="hFU-rb-VUE" secondAttribute="bottom" id="LYy-HC-T5W"/>
+                            <constraint firstItem="hFU-rb-VUE" firstAttribute="top" secondItem="rOx-aE-6m3" secondAttribute="top" id="SOX-P1-12b"/>
+                            <constraint firstAttribute="trailing" secondItem="hFU-rb-VUE" secondAttribute="trailing" id="yFL-gr-OMb"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="首页" id="tYi-hT-PxE"/>
+                    <connections>
+                        <outlet property="weiboTableView" destination="hFU-rb-VUE" id="OoK-2V-TF5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYb-aO-1oZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="483" y="405"/>
+        </scene>
+        <!--Comment View Controller-->
+        <scene sceneID="gGx-cM-xYA">
+            <objects>
+                <viewController storyboardIdentifier="kCommentViewControllerID" id="enJ-f5-exV" customClass="CommentViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="CtH-Kh-tvQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="VLn-qu-755"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4Ds-Ql-ZQb">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="NaQ-Mx-MZC" customClass="CommentTableView">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="NaQ-Mx-MZC" secondAttribute="trailing" id="25V-2w-5qn"/>
+                            <constraint firstItem="NaQ-Mx-MZC" firstAttribute="leading" secondItem="4Ds-Ql-ZQb" secondAttribute="leading" id="K9U-qu-axN"/>
+                            <constraint firstItem="VLn-qu-755" firstAttribute="top" secondItem="NaQ-Mx-MZC" secondAttribute="bottom" id="UWO-Vm-lQM"/>
+                            <constraint firstItem="NaQ-Mx-MZC" firstAttribute="top" secondItem="4Ds-Ql-ZQb" secondAttribute="top" id="jiF-GX-vk7"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cmmtTableView" destination="NaQ-Mx-MZC" id="l54-8d-9HJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uSu-yL-5fb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1199" y="449"/>
+        </scene>
+    </scenes>
+</document>

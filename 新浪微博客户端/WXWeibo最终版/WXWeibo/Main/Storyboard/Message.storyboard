@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1509" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="jKE-a0-Cww">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--Root Navigation Controller-->
+        <scene sceneID="glg-eE-HPt">
+            <objects>
+                <navigationController id="jKE-a0-Cww" customClass="RootNavigationController" sceneMemberID="viewController">
+                    <extendedEdge key="edgesForExtendedLayout" top="YES"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="oRk-IL-jYx">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="aRT-P0-ZCA" kind="relationship" relationship="rootViewController" id="A3v-he-jvW"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="62f-If-9Ni" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-379" y="481"/>
+        </scene>
+        <!--Message View Controller-->
+        <scene sceneID="Ox1-X6-Jf4">
+            <objects>
+                <viewController id="aRT-P0-ZCA" customClass="MessageViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="WSJ-MM-j1C"/>
+                        <viewControllerLayoutGuide type="bottom" id="h7W-4b-Znr"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="rU5-S7-dK4">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="600" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="lqX-jI-28E" customClass="WeiboTableView">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="h7W-4b-Znr" firstAttribute="top" secondItem="lqX-jI-28E" secondAttribute="bottom" id="6r3-yq-zsl"/>
+                            <constraint firstItem="lqX-jI-28E" firstAttribute="top" secondItem="rU5-S7-dK4" secondAttribute="top" id="lUR-lb-Zwa"/>
+                            <constraint firstAttribute="trailing" secondItem="lqX-jI-28E" secondAttribute="trailing" id="paX-8B-dDd"/>
+                            <constraint firstItem="lqX-jI-28E" firstAttribute="leading" secondItem="rU5-S7-dK4" secondAttribute="leading" id="rpe-mW-mxU"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="MOK-tJ-4uz"/>
+                    <connections>
+                        <outlet property="tbView" destination="lqX-jI-28E" id="9bT-nK-OaW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="814-po-NBl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="551" y="481"/>
+        </scene>
+    </scenes>
+</document>
